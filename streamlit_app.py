@@ -32,7 +32,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 import snowflake.connector
 
-streamlit.text(streamlit.secrets["snowflake"])
+streamlit.text(streamlit.secrets)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
